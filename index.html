@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games</title> <!-- change this to the title of the tab you want -->
+    <title>Reds Games</title> <!-- change this to the title of the tab you want -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
@@ -90,34 +91,101 @@
 <body>
     <header>
         <button onclick="location.href='index.html'">Games</button>
-        <button onclick="location.href='apps.html'">Apps</button>
-    </header>
-    <div class="section">
-        <h2>Games</h2> <!-- change this to what you want above ur games -->
-        <div class="game-card" onclick="openFullscreen('https://krunker.io/')"> 
-            <img src="https://via.placeholder.com/200x160" alt="Krunker.io">
-            <h3>Krunker.io</h3>
-        </div>
-        <div class="game-card" onclick="openFullscreen('https://agar.io/')">
-            <img src="https://via.placeholder.com/200x160" alt="Agar.io">
-            <h3>Agar.io</h3>
-        </div>
-        <div class="game-card" onclick="openFullscreen('https://slither.io/')">
-            <img src="https://via.placeholder.com/200x160" alt="Slither.io">
-            <h3>Slither.io</h3>
-        </div>
-        <div class="game-card" onclick="openFullscreen('https://shellshock.io/')">
-            <img src="https://via.placeholder.com/200x160" alt="Shell Shockers">
-            <h3>Shell Shockers</h3>
-        </div>
-        <div class="game-card" onclick="openFullscreen('https://diep.io/')">
-            <img src="https://via.placeholder.com/200x160" alt="Diep.io">
-            <h3>Diep.io</h3>
-            <!-- copy one of these to add new games, change link to wanted game, and img to a links favicon (icon on the tab) the alt will just show the text if img doesnt work (change the text to work as well) -->
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2024 insert website name here</p> 
-    </footer>
-</body> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Reds Games</title>
+	<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background-color: #000;
+			margin: 0;
+			font-family: 'Share Tech Mono', monospace;
+			color: #0f0;
+			text-shadow: 0 0 5px #28282b;
+		}
+
+		.game-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			gap: 15px;
+			width: 90%;
+			max-width: 1200px;
+			padding: 20px;
+		}
+
+		.game-item {
+			position: relative;
+			border-radius: 10px;
+			overflow: hidden;
+			cursor: pointer;
+			background-color: #28282B;
+			border: 2px solid #181819;
+			box-shadow: 0px 0px 15px rgba(40, 40, 43, 0.8);
+			aspect-ratio: 1 / 1;
+		}
+
+		.game-item img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.game-item:hover img {
+			transform: scale(1.1);
+			box-shadow: 0px 0px 20px rgba(40, 40, 43, 1);
+		}
+
+		.game-title {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 45px;
+
+			background: rgba(0, 0, 0, 0.85);
+			color: #28282B;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			font-size: 1rem;
+			text-align: center;
+			padding: 0;
+
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+
+			opacity: 0;
+			transform: translateY(10px);
+			transition: opacity 0.3s ease, transform 0.3s ease;
+		}
+
+		.game-item:hover .game-title {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="game-grid">
+		<a href="redsgamesv1.vercel.app/games/slope.html" class="game-item">
+			<img src="https://redsgamesv1.vercel.app/images/slope.png" alt="Granny Game">
+			<div class="game-title">Slope</div>
+	</div>
+</body>
+
 </html>
